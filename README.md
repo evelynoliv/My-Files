@@ -1,4 +1,4 @@
 # MyFiles
 
-Repósitório com projetos diversos.
+Repósitório com projetos realizados durante curso de Full Stack.
 
