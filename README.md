@@ -1,4 +1,4 @@
-# MyFiles
+# Portfólio
 
-Repósitório com projetos realizados durante curso de Full Stack.
+Repósitório com projetos diversos.
 
