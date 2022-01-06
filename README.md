@@ -1,4 +1,4 @@
 # Portfólio
 
-Repósitório com projetos diversos.
+Repósitório com projetos realizados durante o curso de Full Stack.
 
