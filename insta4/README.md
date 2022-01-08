@@ -1,7 +1,9 @@
 # Insta4
 Projeto que consiste em criar um página similar ao Instagram
 
-#Tecnologias utilizadas
+# Insta4
+
+# Tecnologias utilizadas
 ReactJS
 Libs: Styled-Components
 
