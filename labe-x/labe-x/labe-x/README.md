@@ -1,5 +1,4 @@
 # EVA-UX Space Travels
-
 Projeto que simula a página inicial de um site com uma lista de opções de viagens espaciais.
 
 Link: www.craven-rod.surge.sh
