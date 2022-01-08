@@ -3,7 +3,7 @@
 Projeto que consiste na página incial de um site de viagens espaciais<br>
 
 # Tecnologias utilizadas
-ReactJS
+ReactJS<br>
 Libs: Styled-Components
 
 Link: www.craven-rod.surge.sh <br>
