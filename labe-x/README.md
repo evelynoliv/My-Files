@@ -1,6 +1,6 @@
 # EVA-UX SPACE TRAVELS
 
-Projeto que consiste na página incial de um site de viagens espaciais<br>
+Projeto que consiste na página incial de um site de viagens espaciais<br> (em construção)
 
 # Tecnologias utilizadas
 ReactJS<br>
