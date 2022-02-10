@@ -8,19 +8,19 @@ const useRequestData = (endpoint) => {
     const [error, setError] = useState("");
 
     useEffect(() => {
-        setIsLoading(true)
+        setIsLoading(true);
         axios.get(`${BASE_URL}${endpoint}`)
         .then((res) =>{
-            setIsLoading(false)
-            setData(res.data)
+            setIsLoading(false);
+            setData(res.data);
         })
         .catch((err) => {
-            setIsLoading(false)
-            setError(err)
-        })
-    }, [endpoint])
+            setIsLoading(false);
+            setError(err);
+        });
+    }, [endpoint]);
 
-    return [data, error, isLoading]
-}
+    return [data, error, isLoading];
+};
 
 export default useRequestData;

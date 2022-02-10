@@ -1,59 +1,91 @@
-import React from "react"
+import React from "react";
 import { useParams } from "react-router-dom";
 import useRequestData from "../../Hooks/useRequestData";
-import { ContainerMain, ContainerImg, ContainerMoves, ContainerStats, ContainerTypes } from "./Style";
+import { goToHome } from "../../Routes/Coordinator";
+import { useNavigate } from "react-router-dom";
+import {
+  CardPokemon,
+  TypeButton,
+  StatsArea,
+  StatsItem,
+  TypesContainer,
+  MovesContainer,
+  StatsContainer,
+  DescriptionContainer,
+  DivMaior,
+  DivMoves
+} from "./Style";
 
+const DetalhesPage = () => {
+  const navigate = useNavigate();
+  const params = useParams();
+  const [pokemon] = useRequestData(`${params.name}`);
+  const pokeType = pokemon && pokemon?.types[0]?.type?.name;
 
+  const pokemonTypes =
+    pokemon &&
+    pokemon.types.map((pokemon) => {
+      return (
+        <TypeButton key={pokemon.id} type={pokemon.type.name}>
+          <img src={`/icons/${pokemon.type.name}.svg`} alt="imagem" />
+          <p>{pokemon.type.name}</p>
+        </TypeButton>
+      );
+    });
 
-const DetailsPage = () => {
+  const pokemonMoves =
+    pokemon &&
+    pokemon.moves.slice(0, 4).map((pokemon) => {
+      return <p key={pokemon.id}>- {pokemon.move.name}</p>;
+    });
 
-    
-    const poke = ""
-   
+  const pokemonStats =
+    pokemon &&
+    pokemon.stats.map((pokemon) => {
+      return (
+        <StatsArea key={pokemon.id}>
+          <p>{pokemon.stat.name}</p>
+          <p>{pokemon.base_stat}</p>
+          <StatsItem
+            baseStat={pokemon.base_stat > 100 ? 100 : pokemon.base_stat}
+            type={pokeType}
+          />
+        </StatsArea>
+      );
+    });
 
-    return (
-        <ContainerMain>
-           
-            <h2>Detalhes do Pokemon: {poke.name && poke.name.toUpperCase()}</h2>
+  return (
+    <div>
+      {pokemon && (
+        <DivMaior>
+          <CardPokemon type={pokeType}>
+            <h4 onClick={() => goToHome(navigate)}>Voltar</h4>
+            <img
+              src={pokemon.sprites.other["official-artwork"].front_default}
+              alt={pokemon.name}
+            />
+            <h1>{pokemon.name}</h1>
+          </CardPokemon>
+          <DescriptionContainer>
+            <DivMoves>
+              <TypesContainer>
+                {pokemon.types.length > 1 ? <h1>Types</h1> : <h1>Type</h1>}
+                <div>{pokemonTypes}</div>
+              </TypesContainer>
+              <MovesContainer>
+                <h1>Moves</h1>
+                <div>{pokemonMoves}</div>
+              </MovesContainer>
+            </DivMoves>
+            <StatsContainer>
+              <h1>Stats</h1>
+              <div>{pokemonStats}</div>
+            </StatsContainer>
+          </DescriptionContainer>
+        </DivMaior>
+      )}
+    </div>
+  );
+};
 
-            <ContainerImg>
-                <img src={poke.sprites && poke.sprites.front_default} />
-                <img src={poke.sprites && poke.sprites.back_default} />
-            </ContainerImg>
-
-            <ContainerTypes>
-                <h4>Types:</h4>
-                {poke.types && poke.types.length > 0 ?
-                    <div>
-                        <p> {poke.types && poke.types[0].type.name} </p>
-                        <p> {poke.types[1] && poke.types[1].type.name} </p>
-                    </div>
-                    :
-                    <p> {poke.types && poke.types[0].type.name} </p>
-                }
-            </ContainerTypes>
-
-            <ContainerMoves>
-                <h4>Moves:</h4>
-                <p>{poke.moves && poke.moves[0].move.name}</p>
-                <p>{poke.moves && poke.moves[1].move.name}</p>
-                <p>{poke.moves && poke.moves[2].move.name}</p>
-                <p>{poke.moves && poke.moves[3].move.name}</p>
-                <p>{poke.moves && poke.moves[4].move.name}</p>
-
-            </ContainerMoves>
-
-            <ContainerStats>
-                <h4>Stats:</h4>
-                <p>HP: {poke.stats && poke.stats[0].base_stat}</p>
-                <p>Attack: {poke.stats && poke.stats[1].base_stat}</p>
-                <p>Defense: {poke.stats && poke.stats[2].base_stat}</p>
-                <p>Special Attack: {poke.stats && poke.stats[3].base_stat}</p>
-                <p>Special Defense: {poke.stats && poke.stats[4].base_stat}</p>
-                <p>Speed: {poke.stats && poke.stats[5].base_stat}</p>
-            </ContainerStats>
-        </ContainerMain>
-    )
-}
-
-export default DetailsPage;
+export default DetalhesPage;

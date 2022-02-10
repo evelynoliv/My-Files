@@ -30,6 +30,7 @@ export const Menu = styled.div`
 `;
 
 export const ButtonHeader = styled.button`
+  
   width: 7rem;
   height: 28px;
   font-size: 14px;
@@ -43,3 +44,4 @@ export const ButtonHeader = styled.button`
    background-color: #FFDE00;
   }
 `;
+

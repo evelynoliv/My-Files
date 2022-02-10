@@ -12,7 +12,7 @@ function App() {
       <GlobalStyle/>
       <GlobalState>
         <BrowserRouter>
-          <Header/>
+          
           <Router/>
         </BrowserRouter>
       </GlobalState>

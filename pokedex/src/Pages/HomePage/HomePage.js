@@ -3,15 +3,18 @@ import useRequestData from "../../Hooks/useRequestData";
 import PokemonCard from "../../Components/PokemonCard/PokemonCard";
 import PokemonChoosed from "../../Components/PokemonChoosed/PokemonChoosed";
 import { PokemonList } from "./Style";
-import GlobalContext from "../../Contexts/GlobalContext";
-import { addPokedex } from "../../Services/addPokemon";
-import { removePokedex } from "../../Services/removePokemon";
+import GlobalContextState from "../../Contexts/GlobalContextState";
+import { addPokedex } from "../../Services/addPokedex";
+import { removePokedex } from "../../Services/removePokedex";
+import { removePokeHome } from "../../Services/removePokeHome";
+import Header from "../../Components/Header/Header";
 
 
 const HomePage = () => {
-  const [pokemons] = useRequestData(`?offset=0&limit=40`);
+  const { pokedex, paginaPoke, setOpenRelease } = useContext(GlobalContextState);
+  const [pokemons] = useRequestData(`?offset=${paginaPoke}0&limit=40`);
   const [pokemonPhoto] = useRequestData(`${pokemons?.url}`);
-  const { pokedex } = useContext(GlobalContext);
+  
 
   useEffect(() => {}, [pokedex]);
 
@@ -43,7 +46,7 @@ const HomePage = () => {
 
   return (
     <div>
-      
+      <Header/>
       <PokemonList>{pokemonsList}</PokemonList>
     </div>
   );

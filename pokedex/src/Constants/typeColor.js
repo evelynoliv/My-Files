@@ -1,4 +1,4 @@
-export const colorType = {
+export const typeColor = {
     bug: 'linear-gradient(90deg, #92BC2C 0%, #AFC836 100%)', 
     dark: 'linear-gradient(90deg, #595761 0.64%, #6E7587 99.36%)',
     dragon: 'linear-gradient(90deg, #0C69C8 0.64%, #0180C7 99.36%)',
