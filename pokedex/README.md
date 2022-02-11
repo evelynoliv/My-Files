@@ -1,6 +1,6 @@
 # Pokedex
 
-Projeto que simula site com informações obre Pokemóns. (Em construção)
+Projeto que simula site com informações sobre Pokemóns. (Em construção)
 
 
 
