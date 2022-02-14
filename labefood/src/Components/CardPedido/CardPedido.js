@@ -2,7 +2,7 @@ import React from "react";
 import { useProtectedPage } from "../../Hooks/useProtectedPage";
 import { BASE_URL } from "../../Constants/URL";
 import { useRequestData } from "../../Hooks/useRequestData";
-import { MainContainer, Titulo } from "./Style";
+import { MainContainer, Titulo } from "./styled";
 import Relogio from "../../Assets/Icons/clock.svg";
 
 const CardPedido = () => {

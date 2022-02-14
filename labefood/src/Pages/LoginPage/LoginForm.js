@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 import useForm from "../../Hooks/useForm";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-import { ButtonLogin, LoginFormContainer, TexfieldLogin } from "./Style";
+import { ButtonLogin, LoginFormContainer, TexfieldLogin } from "./styled";
 
 const LoginForm = () => {
   const { form, handleInputOnChange } = useForm({ email: "", password: "" });
@@ -28,7 +28,7 @@ const LoginForm = () => {
             type={"email"}
             variant={"outlined"}
             fullWidth
-            margin={"dense"}
+            margin={"outlined"}
             required
           />
         </TexfieldLogin>
@@ -37,18 +37,18 @@ const LoginForm = () => {
             name={"password"}
             value={form.password}
             onChange={handleInputOnChange}
-            label={"Senha"}
-            placeholder={"Mínimo 6 caracters"}
+            label={"Password"}
+            placeholder={"Min 6 digits"}
             type={"password"}
             variant={"outlined"}
             fullWidth
-            margin={"dense"}
+            margin={"outlined"}
             required
           />
         </TexfieldLogin>
         <ButtonLogin>
           <Button fullWidth variant="contained" type="submit" color="primary">
-            <p>Entrar</p>
+            <p>Sign In</p>
           </Button>
         </ButtonLogin>
       </form>

@@ -9,7 +9,7 @@ import {
   InfoCard,
   NomeProduto,
   QuantidadeContainer
-} from "./Style";
+} from "./styled";
 
 const CardProduto = ({
   id,

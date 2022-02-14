@@ -1,14 +1,15 @@
 import React from "react";
 import { ThemeProvider } from "@mui/material/styles";
 import Router from "./Routes/Router";
-import Theme from "./Constants/Theme";
-import GlobalStyle from './Constants/GlobalStyle';
+import theme from "./Constants/Theme";
+import SplashScreen from "./Components/SplashScreen/SplashScreen";
+import GlobalStyle from './Global/GlobalStyle';
 
 function App() {
   return (
-    <ThemeProvider theme={Theme}>
+    <ThemeProvider theme={theme}>
       <GlobalStyle/>
-      
+      {SplashScreen}
       <Router/>
     </ThemeProvider>
   );

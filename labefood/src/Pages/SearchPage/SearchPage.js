@@ -4,9 +4,9 @@ import TextField from "@mui/material/TextField";
 import { BASE_URL } from "../../Constants/URL";
 import { useProtectedPage } from "../../Hooks/useProtectedPage";
 import { useRequestData } from "../../Hooks/useRequestData";
-import CardRest from "../../Components/CardRest/CardRest";
-import Header from "../../Components/Header/Header";
-import { FraseBusca, InputContainer } from "./Style";
+import CardRestaurante from "../../Components/CardRestaurante/CardRestaurante";
+import Header from "../../Components/Header/header";
+import { FraseBusca, InputContainer } from "./styled";
 
 const SearchPage = () => {
   useProtectedPage();
@@ -42,7 +42,7 @@ const SearchPage = () => {
       .map((restaurante) => {
         return (
           <div key={restaurante.id}>
-            <CardRest
+            <CardRestaurante
               id={restaurante.id}
               src={restaurante.logoUrl}
               name={restaurante.name}

@@ -1,8 +1,8 @@
 import React from "react";
 import { useProtectedPage } from "../../Hooks/useProtectedPage";
-import Header from "../../Components/Header/Header";
+import Header from "../../Components/Header/header";
 import SignAddressForm from "./SignAddressForm";
-import { TextSingUp } from "../SignUpPage/Style";
+import { TextSingUp } from "../SignUpPage/styled";
 
 const SignAddressPage = () => {
   useProtectedPage();

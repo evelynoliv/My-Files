@@ -7,7 +7,7 @@ import {
   InputLabel,
   FormControl,
 } from "@mui/material";
-import { BodyModal, SModal } from "./Style";
+import { BodyModal, SModal } from "./styled";
 
 const PopUP = ({
   aberto,
@@ -22,13 +22,7 @@ const PopUP = ({
     setQuantidade(event.target.value);
   };
 
-  const {
-    restaurantePedido,
-    setRestaurantePedido,
-    pedido,
-    setPedido,
-    adicionarProduto,
-  } = useContext(GlobalContext);
+  const {restaurantePedido,setRestaurantePedido,pedido,setPedido,adicionarProduto} = useContext(GlobalContext);
 
   const definirPedido = () => {
     if (restaurantePedido.id === "" || restaurantePedido.id === idRestaurante) {

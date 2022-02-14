@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import LoginForm from "./LoginForm";
-import { LogoImage, TextSingUp, LoginContainer, ButtonCadastro } from "./Style";
+import { LogoImage, TextSingUp } from "./styled";
 import { useUnprotectedPage } from "../../Hooks/useUnprotectedPage";
 import SplashScreen from "../../Components/SplashScreen/SplashScreen";
+import { LoginContainer, ButtonCadastro } from "./styled";
 import { useHistory } from "react-router-dom";
 import { goToSignUp } from "../../Routes/Coordinator";
 import Button from "@mui/material/Button";
@@ -23,13 +24,13 @@ const LoginPage = () => {
           <LogoImage 
             src={LogoColorida}
           />
-          <TextSingUp>Entrar</TextSingUp>
+          <TextSingUp>LOGIN</TextSingUp>
           <LoginForm />
         </>
       )}
       <ButtonCadastro>
         <Button onClick={() => goToSignUp(history)}>
-          Não Possui cadastro? Clique aqui.
+          New to Rappi4? Sign Up Here!
         </Button>
       </ButtonCadastro>
     </LoginContainer>

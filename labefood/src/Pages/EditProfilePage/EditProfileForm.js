@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
-import axios from "axios";
 import { EditProfile } from "../../Services/Access";
 import { useHistory } from "react-router-dom";
 import useForm from "../../Hooks/useForm";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-import { ButtonLoginContainer, LoginContainer, TexfieldLogin } from "./Style";
+import { ButtonLoginContainer, LoginContainer, TexfieldLogin } from "./styled";
 import { BASE_URL } from "../../Constants/URL";
+import axios from "axios";
 import { useProtectedPage } from "../../Hooks/useProtectedPage";
 
 const EditProfileForm = () => {

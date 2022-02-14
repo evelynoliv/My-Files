@@ -6,12 +6,12 @@ import EditProfilePage from "../Pages/EditProfilePage/EditProfilePage"
 import HomePage from "../Pages/HomePage/HomePage"
 import LoginPage from "../Pages/LoginPage/LoginPage"
 import ProfilePage from "../Pages/ProfilePage/ProfilePage"
-import RestPage from "../Pages/RestPage/RestPage"
+import RestaurantPage from "../Pages/RestaurantPage/RestaurantPage"
 import SearchPage from "../Pages/SearchPage/SearchPage"
 import SignUpPage from "../Pages/SignUpPage/SignUpPage"
 import ErrorPage from "../Pages/ErrorPage/ErrorPage"
 import SignAddressPage from "../Pages/SignAddressPage/SignAddressPage";
-// import SplashScreen from "../Components/SplashScreem/SplashScreen";
+import SplashScreen from "../Components/SplashScreen/SplashScreen";
 
 const Router = () => {
     return(
@@ -42,7 +42,7 @@ const Router = () => {
                 </Route>
 
                 <Route exact path="/restaurante/:id">
-                    <RestPage/>
+                    <RestaurantPage/>
                 </Route>
 
                 <Route exact path="/buscar">
