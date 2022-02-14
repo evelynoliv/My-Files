@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import CardRestaurante from "../../Components/CardRest/CardRest";
+import CardRestaurante from "../../Components/CardRestaurante/CardRestaurante";
 import Menu from "../../Components/Menu/Menu";
 import { BASE_URL } from "../../Constants/URL";
 import { useRequestData } from "../../Hooks/useRequestData";
@@ -7,16 +7,10 @@ import { useProtectedPage } from "../../Hooks/useProtectedPage";
 import useForm from "../../Hooks/useForm";
 import { goToSearch } from "../../Routes/Coordinator";
 import { useHistory } from "react-router-dom";
-import Header from "../../Components/Header/Header";
+import Header from "../../Components/Header/header";
 import CardPedido from "../../Components/CardPedido/CardPedido";
 import { TextField } from "@mui/material";
-import {
-  HomePageContainer,
-  FiltroHomeContainer,
-  TextFiltroHome,
-  InputContainer,
-  RestaurantesContainer
-} from "./Style";
+import {HomePageContainer,FiltroHomeContainer,TextFiltroHome,InputContainer,RestaurantesContainer} from "./styled";
 
 const HomePage = () => {
   useProtectedPage();
@@ -80,19 +74,19 @@ const HomePage = () => {
           <TextFiltroHome onClick={() => handleTipe("Hamburguer")}>
             Hamburguer
           </TextFiltroHome>
-          <TextFiltroHome onClick={() => handleTipe("Asiática")}>
+          <TextFiltroHome onClick={() => handleTipe("Asian")}>
             Asiática
           </TextFiltroHome>
           <TextFiltroHome onClick={() => handleTipe("Árabe")}>
             Árabe
           </TextFiltroHome>
-          <TextFiltroHome onClick={() => handleTipe("Italiana")}>
+          <TextFiltroHome onClick={() => handleTipe("Italian")}>
             Italiana
           </TextFiltroHome>
-          <TextFiltroHome onClick={() => handleTipe("Sorvetes")}>
+          <TextFiltroHome onClick={() => handleTipe("Ice cream")}>
             Sorvetes
           </TextFiltroHome>
-          <TextFiltroHome onClick={() => handleTipe("Carnes")}>
+          <TextFiltroHome onClick={() => handleTipe("Meats")}>
             Carnes
           </TextFiltroHome>
           <TextFiltroHome onClick={() => handleTipe("Baiana")}>
@@ -101,7 +95,7 @@ const HomePage = () => {
           <TextFiltroHome onClick={() => handleTipe("Petiscos")}>
             Petiscos
           </TextFiltroHome>
-          <TextFiltroHome onClick={() => handleTipe("Mexicana")}>
+          <TextFiltroHome onClick={() => handleTipe("Mexican")}>
             Mexicana
           </TextFiltroHome>
         </FiltroHomeContainer>

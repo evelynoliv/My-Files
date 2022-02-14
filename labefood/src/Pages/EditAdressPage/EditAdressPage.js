@@ -1,8 +1,8 @@
 import React from "react";
 import { useProtectedPage } from "../../Hooks/useProtectedPage";
 import EditAddressForm from "./EditAdressForm";
-import Header from "../../Components/Header/Header";
-import { EditAddressContainer } from "./Style";
+import Header from "../../Components/Header/header";
+import { EditAddressContainer } from "./styled";
 
 const EditAdressPage = () => {
   useProtectedPage();

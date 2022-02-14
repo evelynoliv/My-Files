@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 import useForm from '../../Hooks/useForm'
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import { SingUpFormContainer, TexfieldContainer, ButtonCadastro } from "../SignUpPage/Style";
+import { SingUpFormContainer, TexfieldContainer, ButtonCadastro } from "../SignUpPage/styled";
 
 
 
@@ -17,7 +17,7 @@ const SignUpForm = () => {
         if(form.password === form.password2){
             SignUp(form, clear, history)
         } else {
-            alert("As senhas informadas não são iguais")
+            alert("Password does not match!")
         }
     }
    
@@ -29,8 +29,8 @@ const SignUpForm = () => {
                         name={"name"}
                         value={form.username}
                         onChange={handleInputOnChange}
-                        label={"Nome"} 
-                        placeholder="Nome e sobrenome"                      
+                        label={"Name"} 
+                        placeholder="Name and lastname"                      
                         type={"name"}
                         variant={"outlined"}
                         fullWidth
@@ -68,8 +68,8 @@ const SignUpForm = () => {
                         name={"password"}
                         value={form.password}
                         onChange={handleInputOnChange}
-                        label={"Senha"}
-                        placeholder="Mínimo de 6 caracters"
+                        label={"Password"}
+                        placeholder="Min 6 digits"
                         type={"password"}
                         variant={"outlined"}
                         fullWidth
@@ -81,8 +81,8 @@ const SignUpForm = () => {
                         name={"password2"}
                         value={form.password2}
                         onChange={handleInputOnChange}
-                        label={"Confirmar"}
-                        placeholder="Confirme a senha anterior"
+                        label={"Confirm password"}
+                        placeholder="Confirm password"
                         type={"password"}
                         variant={"outlined"}
                         fullWidth
@@ -92,7 +92,7 @@ const SignUpForm = () => {
                     </TexfieldContainer>
                     <ButtonCadastro>
                     <Button fullWidth variant="contained" type="submit" color="primary">
-                     <p>Criar</p>
+                     <p>Sign Up</p>
                      </Button>      
                      </ButtonCadastro>
                            

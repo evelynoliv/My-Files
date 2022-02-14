@@ -27,7 +27,7 @@ export const goToRestaurant = (history, id) => {
 }
 
 export const goToSearch = (history) => {
-    history.push("/search")
+    history.push("/buscar")
 }
 
 export const goToSignUp = (history) => {

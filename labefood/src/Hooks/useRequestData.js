@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-
+import { MessageSweet } from "../Assets/Alert/Alert";
 
 export const useRequestData = (initialData, url) => {
   const [data, setData] = useState(initialData)
@@ -16,11 +16,10 @@ export const useRequestData = (initialData, url) => {
       setData(response.data)
     })
     .catch((error) => {
-      alert( error.response.data.message, "error");
+      MessageSweet.fire({title: error.response.data.message, icon: "error"});
     }) 
   }, [url])
 
   return (data)
 }
-  
 

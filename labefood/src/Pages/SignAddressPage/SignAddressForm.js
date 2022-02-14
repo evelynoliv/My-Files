@@ -100,4 +100,4 @@ const SignAddressForm = () => {
     )
 }
 
-export default SignAddressForm; 
+export default SignAddressForm;

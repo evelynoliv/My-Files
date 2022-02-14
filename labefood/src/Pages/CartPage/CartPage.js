@@ -6,7 +6,7 @@ import { useRequestData } from "../../Hooks/useRequestData";
 import { PlaceOrder } from "../../Services/Access";
 import { useHistory } from "react-router-dom";
 import CardProduto from "../../Components/CardProduto/CardProduto";
-import Header from "../../Components/Header/Header";
+import Header from "../../Components/Header/header";
 import Menu from "../../Components/Menu/Menu";
 import { Button } from "@mui/material";
 import {
@@ -20,20 +20,12 @@ import {
   Frete,
   Preco,
   CarrinhoVazio,
-} from "./Style";
+} from "./styled";
 
 const CartPage = () => {
   useProtectedPage();
   const history = useHistory();
-  const {
-    carrinho,
-    setCarrinho,
-    pedido,
-    setPedido,
-    restaurantePedido,
-    setRestaurantePedido,
-    removerProduto,
-  } = useContext(GlobalContext);
+  const {carrinho,setCarrinho,pedido,setPedido,restaurantePedido,setRestaurantePedido,removerProduto} = useContext(GlobalContext);
   const [precoTotal, setPrecoTotal] = useState(0);
   const perfil = useRequestData([], `${BASE_URL}/profile`);
   const [data, setData] = useState("");

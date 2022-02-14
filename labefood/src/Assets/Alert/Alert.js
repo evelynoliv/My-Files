@@ -1,9 +1,10 @@
 import Swal from "sweetalert2";
 
-export const MessageArea = Swal.mixin({
+export const MessageSweet = Swal.mixin({
+    icon: "warning",  
     toast: true,
     position: "top-end",
     showConfirmButton: false,
-    timer: 2000,
-    timerProgressBar: true,
+    timer: 1500,
+  
   });

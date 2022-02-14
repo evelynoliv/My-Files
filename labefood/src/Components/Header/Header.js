@@ -1,6 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-import { Headers, Text } from "./Style";
+import { Headers, Text } from "./styled";
 import { Button } from "@mui/material";
 import Voltar from "../../Assets/Icons/back.svg";
 
@@ -17,5 +17,4 @@ const Header = ({ title }) => {
 };
 
 export default Header;
-
 

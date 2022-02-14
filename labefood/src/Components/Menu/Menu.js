@@ -2,7 +2,7 @@ import React from "react";
 import { useProtectedPage } from '../../Hooks/useProtectedPage';
 import { useHistory } from "react-router-dom";
 import { goToHome, goToCart, goToProfile } from "../../Routes/Coordinator";
-import { MenuHome } from "./Style";
+import { MenuHome } from "./styled";
 import { Button } from "@mui/material";
 import Home from '../../Assets/Icons/homepage.svg'
 import HomeColorido from '../../Assets/Icons/homepage-color.svg'

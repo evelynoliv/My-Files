@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "/static/js/main.a6abc420.js",
+    "static/media/pokebola2.png": "/static/media/pokebola2.ca5d2b9abd659045fb49.png",
+    "static/media/logo.png": "/static/media/logo.907dcf3a592a0e37e0dd.png",
+    "index.html": "/index.html",
+    "main.a6abc420.js.map": "/static/js/main.a6abc420.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.a6abc420.js"
+  ]
+}
