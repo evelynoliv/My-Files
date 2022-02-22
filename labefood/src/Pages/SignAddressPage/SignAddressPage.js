@@ -1,6 +1,6 @@
 import React from "react";
 import { useProtectedPage } from "../../Hooks/useProtectedPage";
-import Header from "../../Components/Header/header";
+import Header from "../../Components/Header/Header";
 import SignAddressForm from "./SignAddressForm";
 import { TextSingUp } from "../SignUpPage/styled";
 

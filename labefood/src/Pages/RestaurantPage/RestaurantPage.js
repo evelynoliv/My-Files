@@ -7,7 +7,7 @@ import GlobalContext from "../../Contexts/GlobalContext";
 import PopUp from "../../Components/PopUp/PopUp";
 import CardProduto from "../../Components/CardProduto/CardProduto";
 import Menu from "../../Components/Menu/Menu";
-import Header from "../../Components/Header/header";
+import Header from "../../Components/Header/Header";
 import {ImgRestaurant,TextRest, DetalhesRest,InfoRest,CategoriaCard,MainContainer,ProdutosContainer} from "./styled";
 
 

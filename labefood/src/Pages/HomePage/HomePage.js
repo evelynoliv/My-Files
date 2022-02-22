@@ -7,7 +7,7 @@ import { useProtectedPage } from "../../Hooks/useProtectedPage";
 import useForm from "../../Hooks/useForm";
 import { goToSearch } from "../../Routes/Coordinator";
 import { useHistory } from "react-router-dom";
-import Header from "../../Components/Header/header";
+import Header from "../../Components/Header/Header";
 import CardPedido from "../../Components/CardPedido/CardPedido";
 import { TextField } from "@mui/material";
 import {HomePageContainer,FiltroHomeContainer,TextFiltroHome,InputContainer,RestaurantesContainer} from "./styled";

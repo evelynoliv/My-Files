@@ -1,7 +1,7 @@
 import React from "react";
 import EditProfileForm from "./EditProfileForm";
 import { useProtectedPage } from "../../Hooks/useProtectedPage";
-import Header from "../../Components/Header/header";
+import Header from "../../Components/Header/Header";
 
 const EditProfilePage = () => {
   useProtectedPage();
