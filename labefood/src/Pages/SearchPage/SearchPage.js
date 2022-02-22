@@ -5,7 +5,7 @@ import { BASE_URL } from "../../Constants/URL";
 import { useProtectedPage } from "../../Hooks/useProtectedPage";
 import { useRequestData } from "../../Hooks/useRequestData";
 import CardRestaurante from "../../Components/CardRestaurante/CardRestaurante";
-import Header from "../../Components/Header/header";
+import Header from "../../Components/Header/Header";
 import { FraseBusca, InputContainer } from "./styled";
 
 const SearchPage = () => {

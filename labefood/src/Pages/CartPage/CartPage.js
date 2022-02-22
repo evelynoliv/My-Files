@@ -6,7 +6,7 @@ import { useRequestData } from "../../Hooks/useRequestData";
 import { PlaceOrder } from "../../Services/Access";
 import { useHistory } from "react-router-dom";
 import CardProduto from "../../Components/CardProduto/CardProduto";
-import Header from "../../Components/Header/header";
+import Header from "../../Components/Header/Header";
 import Menu from "../../Components/Menu/Menu";
 import { Button } from "@mui/material";
 import {

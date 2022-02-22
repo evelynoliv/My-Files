@@ -5,7 +5,7 @@ import { goToEditAdress, goToEditProfile } from "../../Routes/Coordinator";
 import { useHistory } from "react-router-dom";
 import { useProtectedPage } from "../../Hooks/useProtectedPage";
 import Menu from "../../Components/Menu/Menu";
-import Header from "../../Components/Header/header";
+import Header from "../../Components/Header/Header";
 import { Profile, CardHistorico, CardHistoricoContainer, DadosContainer, DadosContainer2, HistoricoContainer } from "./styled";
 import { Button } from "@mui/material";
 import Editar from "../../Assets/Icons/edit.svg";
