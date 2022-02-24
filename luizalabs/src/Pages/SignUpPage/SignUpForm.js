@@ -9,7 +9,7 @@ import { SingUpFormContainer, TexfieldContainer, ButtonCadastro } from "../SignU
 
 
 const SignUpForm = () => {
-    const {form, handleInputOnChange, clear} = useForm({name:"", email:"", cpf:"", password:"", password2:""})
+    const {form, handleInputOnChange, clear} = useForm({name:"", email:"", password:"", password2:""})
     const history = useHistory()
 
     const onSubmitForm = (event) => {
@@ -17,7 +17,7 @@ const SignUpForm = () => {
         if(form.password === form.password2){
             SignUp(form, clear, history)
         } else {
-            alert("Password does not match!")
+            alert("Senhas não são iguais!")
         }
     }
    

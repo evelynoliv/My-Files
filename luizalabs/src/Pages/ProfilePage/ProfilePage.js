@@ -16,22 +16,6 @@ const ProfilePage = () => {
   const perfil = useRequestData([], `${BASE_URL}/profile`);
   const pedidos = useRequestData([], `${BASE_URL}/orders/history`);
 
-  const listarPedidos =
-    pedidos &&
-    pedidos.orders &&
-    pedidos.orders.map((pedido) => {
-      let converterData = new Date(pedido.createdAt);
-      const formatarData = converterData.toLocaleDateString("pt-BR", {
-        timeZone: "UTC",
-      });
-      return (
-        <CardHistorico>
-          <p>{pedido.restaurantName}</p>
-          <p>{formatarData}</p>
-          <p>SUBTOTAL R${pedido.totalPrice.toFixed(2).replace(".", ",")}</p>
-        </CardHistorico>
-      );
-    });
 
   return (
     <main>
@@ -65,7 +49,7 @@ const ProfilePage = () => {
         <h3> Histórico de pedidos</h3>
         <CardHistoricoContainer>
           {pedidos.orders ? (
-            <div>{listarPedidos}</div>
+            <div></div>
           ) : (
             <h4>Você ainda não realizou nenhum pedido!</h4>
           )}

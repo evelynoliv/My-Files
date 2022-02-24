@@ -5,7 +5,7 @@ import { MessageSweet } from "../Assets/Alert/Alert";
 
 export const Login = (body, history) => {
   axios
-    .post(`${BASE_URL}/login`, body)
+    .post(`http://localhost:3000/login`, body)
     .then((res) => {
       localStorage.setItem("token", res.data.token);
       if (res.data.user.hasAddress === false) {
@@ -24,20 +24,21 @@ export const Login = (body, history) => {
 
 export const SignUp = (body, clear, history) => {
   axios
-    .post(`${BASE_URL}/signup`, body)
+    .post(`http://localhost:3000/cadastrar`, body)
     .then((res) => {
       localStorage.setItem("token", res.data.token);
       clear();
       goToSignAddress(history);
     })
     .catch((err) => {
-      MessageSweet.fire({title: err.response.data.message, icon: "error"});
+      // MessageSweet.fire("Erro ao cadastrar usuário!");
+      console.log(err.message)
     });
 };
 
 export const SignAddress = (body, clear, history) => {
   axios
-    .put(`${BASE_URL}/address`, body, {
+    .put(`http://localhost:3000/address`, body, {
       headers: {
         auth: localStorage.getItem("token"),
       },
@@ -58,7 +59,7 @@ export const SignAddress = (body, clear, history) => {
 
 export const EditProfile = (body, history) => {
   axios
-    .put(`${BASE_URL}/profile`, body, {
+    .put(`$http://localhost:3000/profile`, body, {
       headers: {
         auth: localStorage.getItem("token"),
       },
@@ -95,22 +96,3 @@ export const EditAddress = (body, history) => {
     });
 };
 
-export const PlaceOrder = (body, id, setData, history) => {
-  axios
-    .post(`${BASE_URL}/restaurants/${id}/order`, body, {
-      headers: {
-        auth: localStorage.getItem("token"),
-      },
-    })
-    .then((res) => {
-      setData(res.data);
-      MessageSweet.fire({title: "Pedido realizado com sucesso",
-        background: "#e86e5a",
-        color: "#ffffff",
-      });
-      goToHome(history)
-    })
-    .catch((err) => {
-      MessageSweet.fire({title: err.response.data.message, icon: "error"});
-    });
-};
