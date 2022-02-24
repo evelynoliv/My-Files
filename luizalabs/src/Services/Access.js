@@ -1,11 +1,12 @@
 import axios from "axios";
 import { BASE_URL } from "../Constants/URL";
-import {goToHome, goToProfile,goToSignAddress, goToSignUp} from "../Routes/Coordinator";
-import { MessageSweet } from "../Assets/Alert/Alert";
+import {goToHome,goToProfile,goToSignAddress,goToSignUp,} from "../Routes/Coordinator";
+
+import { MessageArea } from "../Assets/Alert/Alert";
 
 export const Login = (body, history) => {
   axios
-    .post(`http://localhost:3000/login`, body)
+    .post(`${BASE_URL}/login`, body)
     .then((res) => {
       localStorage.setItem("token", res.data.token);
       if (res.data.user.hasAddress === false) {
@@ -15,8 +16,8 @@ export const Login = (body, history) => {
       }
     })
     .catch((err) => {
-      MessageSweet.fire({title: err.response.data.message, icon: "error"});
-      if (err.response.data.message === "User not found!") {
+      MessageArea.fire({title: err.response.data.message, icon: "error"});
+      if (err.response.data.message === "Usuário não encontrado") {
         goToSignUp(history);
       }
     });
@@ -24,55 +25,54 @@ export const Login = (body, history) => {
 
 export const SignUp = (body, clear, history) => {
   axios
-    .post(`http://localhost:3000/cadastrar`, body)
+    .post(`${BASE_URL}/signup`, body)
     .then((res) => {
       localStorage.setItem("token", res.data.token);
       clear();
       goToSignAddress(history);
     })
     .catch((err) => {
-      // MessageSweet.fire("Erro ao cadastrar usuário!");
-      console.log(err.message)
+      MessageArea.fire({title: err.response.data.message, icon: "error"});
     });
 };
 
 export const SignAddress = (body, clear, history) => {
   axios
-    .put(`http://localhost:3000/address`, body, {
+    .put(`${BASE_URL}/address`, body, {
       headers: {
         auth: localStorage.getItem("token"),
       },
     })
     .then((res) => {
       localStorage.setItem("token", res.data.token);
-      MessageSweet.fire({title: "Usuário cadastrado com sucesso!",
-        background: "#e86e5a",
+      MessageArea.fire({title: "Usuário cadastrado com sucesso!",
+        background: "#058EFF",
         color: "#ffffff",
       });
       clear();
       goToHome(history);
     })
     .catch((err) => {
-      MessageSweet.fire({title: err.response.data.message, icon: "error"});
+      MessageArea.fire({title: err.response.data.message, icon: "error"});
     });
 };
 
 export const EditProfile = (body, history) => {
   axios
-    .put(`$http://localhost:3000/profile`, body, {
+    .put(`${BASE_URL}/profile`, body, {
       headers: {
         auth: localStorage.getItem("token"),
       },
     })
     .then((res) => {
-      MessageSweet.fire({title: "Profile updated!",
-        background: "#e86e5a",
+      MessageArea.fire({title: "Perfil atualizado com sucesso!",
+        background: "#058EFF",
         color: "#ffffff",
       });
       goToProfile(history);
     })
     .catch((err) => {
-      MessageSweet.fire({title: err.response.data.message, icon: "error"});
+      MessageArea.fire({title: err.response.data.message, icon: "error"});
     });
 };
 
@@ -85,14 +85,14 @@ export const EditAddress = (body, history) => {
     })
     .then((res) => {
       localStorage.setItem("token", res.data.token);
-      MessageSweet.fire({title: "Addres updated!",
-        background: "#e86e5a",
+      MessageArea.fire({title: "Endereço atualizado com sucesso!",
+        background: "#058EFF",
         color: "#ffffff",
       });
       goToProfile(history);
     })
     .catch((err) => {
-      MessageSweet.fire({title: err.response.data.message, icon: "error"});
+      MessageArea.fire({title: err.response.data.message, icon: "error"});
     });
 };
 
