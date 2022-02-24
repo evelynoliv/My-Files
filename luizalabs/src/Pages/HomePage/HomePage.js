@@ -29,7 +29,7 @@ const HomePage = () => {
 
   return (
     <>
-      <Header title={"Luiza Labs"} />
+      <Header title={"Bem-vindo ao Magalu!"} />
       <HomePageContainer>
         <InputContainer>
 

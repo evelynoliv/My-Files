@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import LoginForm from "./LoginForm";
-import { LogoImage, TextSingUp } from "./styled";
+import { LogoImage } from "./styled";
 import { useUnprotectedPage } from "../../Hooks/useUnprotectedPage";
 import SplashScreen from "../../Components/SplashScreen/SplashScreen";
 import { LoginContainer, ButtonCadastro } from "./styled";
