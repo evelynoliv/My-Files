@@ -9,7 +9,7 @@ import { SingUpFormContainer, TexfieldContainer, ButtonCadastro } from "../SignU
 
 
 const SignUpForm = () => {
-    const {form, handleInputOnChange, clear} = useForm({name:"", email:"", password:"", password2:""})
+    const {form, handleInputOnChange, clear} = useForm({name:"", email:"", cpf:"", password:"", password2:""})
     const history = useHistory()
 
     const onSubmitForm = (event) => {
@@ -17,7 +17,7 @@ const SignUpForm = () => {
         if(form.password === form.password2){
             SignUp(form, clear, history)
         } else {
-            alert("Senhas não são iguais!")
+            alert("As senhas informadas não são iguais")
         }
     }
    
@@ -51,13 +51,25 @@ const SignUpForm = () => {
                         required
                     />
                    
+                    <TextField
+                        name={"cpf"}
+                        value={form.cpf}
+                        onChange={handleInputOnChange}
+                        label={"CPF"}
+                        placeholder="000.000.000-00"
+                        type={"cpf"}
+                        variant={"outlined"}
+                        fullWidth
+                        margin={"dense"}
+                        required
+                    />
                    
                     <TextField
                         name={"password"}
                         value={form.password}
                         onChange={handleInputOnChange}
                         label={"Senha"}
-                        placeholder="Mínimo 6 digitos"
+                        placeholder="Mínimo de 6 caracters"
                         type={"password"}
                         variant={"outlined"}
                         fullWidth
@@ -69,8 +81,8 @@ const SignUpForm = () => {
                         name={"password2"}
                         value={form.password2}
                         onChange={handleInputOnChange}
-                        label={"Confirme a senha"}
-                        placeholder="Confirme a senha"
+                        label={"Confirmar"}
+                        placeholder="Confirme a senha anterior"
                         type={"password"}
                         variant={"outlined"}
                         fullWidth
@@ -80,7 +92,7 @@ const SignUpForm = () => {
                     </TexfieldContainer>
                     <ButtonCadastro>
                     <Button fullWidth variant="contained" type="submit" color="primary">
-                     <p>Cadastrar</p>
+                     <p>Criar</p>
                      </Button>      
                      </ButtonCadastro>
                            
