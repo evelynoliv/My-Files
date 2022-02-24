@@ -1,4 +1,8 @@
-# Labefood
+# LuizaLabs
 
-Projeto que simula um site de delivery para restaurantes. (em construção)
+Repositório que simulia uma página de Login e Cadastro.
+É necessário realizar cadastro do usuário, com dados e endereço.
+Possibilidade de alterar dados e endereço disponíveis.
+
+Link Surge: 
 
