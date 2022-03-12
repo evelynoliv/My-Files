@@ -1,6 +1,6 @@
 # Labeddit
 
-Projeto que simula o site Reddit
+Projeto que simula ao site Reddit (em construção)
 
-## Available Scripts
+
 
