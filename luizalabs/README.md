@@ -1,6 +1,6 @@
 # LuizaLabs
 
-Repositório que simulia uma página de Login e Cadastro.
+Repositório que simulia uma página de Login e Cadastro. <br>
 É necessário realizar cadastro do usuário, com dados e endereço.
 Possibilidade de alterar dados e endereço disponíveis.
 
