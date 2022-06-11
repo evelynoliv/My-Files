@@ -1,3 +1,3 @@
-# Sistema Bancário
+# Bank system
 
-Exercícío que simula um sistema bancário, utilizando Typescript e MySQL
+Exercise that simulates a banking system, using Typescript and MySQL.
