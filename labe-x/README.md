@@ -1,10 +1,6 @@
-# EVA-UX SPACE TRAVELS
+# SPACE TRAVELS
 
-Projeto que consiste na página incial de um site de viagens espaciais<br> (em construção)
-
-# Tecnologias utilizadas
-ReactJS<br>
-Libs: Styled-Components
+Project consisting of the homepage of a space travel website<br> (em construção)
 
 Link: www.craven-rod.surge.sh <br>
 
