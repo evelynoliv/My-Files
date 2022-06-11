@@ -1,10 +1,10 @@
 ## COOKENU
 
-Projeto que consiste no site para cadastro de receitas<br>
+Project that consists of the website for registering recipess<br>
 
 Link: www.scrawny-authority.surge.sh
 
-## Tecnologias utilizadas
+## Tech
 
 ReactJS<br>
 Libs: Styled-Components, Material-UI
