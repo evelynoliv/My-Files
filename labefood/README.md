@@ -1,4 +1,4 @@
 # Labefood
 
-Projeto que simula um site de delivery para restaurantes (em construção)
+Project that simulates a delivery site for restaurants.
 
